@@ -4,6 +4,13 @@
 
 ###Quick Links
 
+####Ruby Links
+[LearnXinY for Ruby](http://learnxinyminutes.com/docs/ruby/)
+[LearnXinY for Ruby Environment/Setup](http://learnxinyminutes.com/docs/ruby-ecosystem/)
+[Ruby Documentation Aggregate](https://www.ruby-lang.org/en/documentation/)
+
+####Rails Links
+
 ####Nitrous.io
 A cloud development environment, i.e. you program from any browser or terminal on a server located somewhere else. We're using this for two reasons:
 
@@ -11,7 +18,6 @@ A cloud development environment, i.e. you program from any browser or terminal o
 2. This way all the setup we do today doesn't just apply to the computer you do it on 
 
 [Nitrous.io](https://www.nitrous.io)
-
 [Nitrous.io sign-up referral link to get extra ram or space](https://www.nitrous.io/join/qC8ddqET1Ak)
 
 ###Ruby/Rails Setup
