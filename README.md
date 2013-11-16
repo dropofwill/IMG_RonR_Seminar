@@ -1,9 +1,8 @@
-##The Interactive Media Guild's Ruby on Rails Bootcamp Guide
-
+##IMG's Ruby on Rails Bootcamp Guide
 ========================================================
 
 ###Quick Links
-
+--------------------------------------------------------
 ####Ruby Links
 * [LearnXinY for Ruby](http://learnxinyminutes.com/docs/ruby/)
 * [LearnXinY for Ruby Environment/Setup](http://learnxinyminutes.com/docs/ruby-ecosystem/)
