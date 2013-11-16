@@ -1,8 +1,8 @@
 ##IMG's Ruby on Rails Bootcamp Guide
-========================================================
+=======
 
 ###Quick Links
---------------------------------------------------------
+-------
 ####Ruby Links
 * [LearnXinY for Ruby](http://learnxinyminutes.com/docs/ruby/)
 * [LearnXinY for Ruby Environment/Setup](http://learnxinyminutes.com/docs/ruby-ecosystem/)
@@ -32,11 +32,16 @@ We're using this for two reasons:
 2. This way all the setup we do today doesn't just apply to the computer you do it on 
 
 ###Ruby/Rails Setup
+-------
 
 ###Getting Started with Ruby
+-------
 
 ###Ruby Exercise
+-------
 
 ###Getting Started with Rails
+-------
 
 ###Rails Exercise
+-------
