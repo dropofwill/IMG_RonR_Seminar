@@ -14,9 +14,9 @@
 * [Rails Documentation](http://api.rubyonrails.org/)
 
 ####Other Gems (i.e. Packages) & Useful Tools
-* [RVM](https://rvm.io/) Ruby Version Manager, let's you swap between multiple versions of ruby.
+* [RVM](https://rvm.io/) Ruby Version Manager, installs and switches between rubies. RVM also has the concept of gemsets to isolate projects' environments completely.
 * [RubyGems](http://guides.rubygems.org/) Software used to manage what Ruby Packages/Libraries (called gems) are installed.
-* [Bundler](http://bundler.io/) Takes care of gem dependencies.
+* [Bundler](http://bundler.io/) Gem dependency resolver.
 * [Git](http://git-scm.com/book) Version control software.
 * [Heroku](https://www.heroku.com/) A cloud application platform that makes it really easy to deploy applications. Deployin basic apps for testing is free.
 
