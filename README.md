@@ -86,7 +86,7 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 To play around with ruby syntax you can run interactive ruby
 
   ```
-  irb
+    irb
   ```
 
 Which lets you run ruby syntax and watch the responses in real time.
@@ -95,15 +95,21 @@ Ruby files are saved with the .rb extenstion.
 
 To run a ruby file in the terminal browse to the appropriate directory with change directory command:
 
-    ```cd path/to/file```
+  ```
+    cd path/to/file
+  ```
 
 and run it:
 
-    ```ruby filename.rb```
+  ```
+    ruby filename.rb
+  ```
 
 Or include the filepath in call:
 
-    ```ruby path/to/file/filename.rb```
+  ```
+    ruby path/to/file/filename.rb
+  ```
 
 
 ###Ruby Exercise
