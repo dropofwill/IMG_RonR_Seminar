@@ -42,6 +42,10 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 3. After it provisions the box it should pop up the IDE. In Rails programming a lot of work is done in the terminal, so some useful Nitrous shortcuts are:
   * Swap full screen terminal: Ctrl Shift F
   * Swap cursor focus from terminal to ide: Ctrl Shift C
+5. Check the Ruby version, it should be 2.0.0psomething
+    
+    <pre>ruby -v</pre>
+
 4. RVM is a nice way to swap between different versions of Ruby. It should be installed, to check in the terminal run:
 
     <pre>rvm -v</pre>
@@ -53,10 +57,8 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
     <pre>rvm help
   rvm gemset help</pre>
   
-5. Check the Ruby version, it should be 2.0.0psomething
-    
-    <pre>ruby -v</pre>
-6.
+  This will tell you what commands and parameters are available.
+6. 
 
 ###Getting Started with Ruby
 -------
@@ -69,3 +71,35 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 
 ###Rails Exercise
 -------
+
+1. Create a new directory for the app with: make directory
+
+    <pre>mkdir name_of_your_app</pre>
+
+2. Move into that directory with: change directory
+
+    <pre>cd name_of_your_app</pre>
+    
+3. Create a new rails app
+
+    <pre>rails new</pre>
+    
+4. Take a look at what this generated for us with: list (ls) all (-a) in a list format (-l)
+
+    <pre>ls -al</pre>
+    
+5. Update the gemfile
+6. While we haven't written any new code yet, rails gives us a very basic app to start with. To run this app type:
+
+    <pre>rails server</pre>
+    
+    or
+    
+    <pre>rails s</pre>
+    
+  This will take a few seconds, but it should eventually output something like:
+  
+  <pre>=> Rails 4.0.1 application starting in development on http://0.0.0.0:3000</pre>
+  
+  This tells you what port it is running on, in my case that's Port 3000. To preview the app, in Nitrous click on the Preview menu-item and select the appropriate port. This will open up a new tab with the default page of the application.
+7.
