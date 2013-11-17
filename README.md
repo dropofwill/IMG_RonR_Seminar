@@ -113,4 +113,40 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
     
 9. Now try running the app again, at the end of the url type /users . From here we can create a new user, edit existing ones, show a users individual page, and delete the user.
 
-10. That's cool, but what can these users do? Let's make a post resource, it should have 
+10. That's cool, but what can these users do? Let's make a post resource, it should have a unique id (again provided), content (a string), and a user_id (integer) that connects to the user that created it.
+
+    <pre>rails generate scaffold Post content:string user_id:integer</pre>
+    
+    And again migrate the database.
+    
+    <pre>rake db:migrate</pre>
+    
+11. Now we have users and posts, but they aren't connected. To connect them we set the user model so that it has_many posts, and that the posts belongs_to a user.
+
+    Modify app/models/user.rb to
+    <pre>class User < ActiveRecord::Base
+      has_many :microposts
+    end</pre>
+    
+    Modify app/models/post.rb to
+    <pre>class Post < ActiveRecord::Base
+      belongs_to :user
+    end</pre>
+
+12. This changed the way the model works internally (for instance in the rails console you can now query a user_name.post and get the posts), but there is nothing forcing a post to have a user. To do this we need to validate the users existence before creation. Rails has the functionality to make this really easily:
+
+    Add this line to the Post model class, in app/models/post.rb
+    <pre>validates :user, presence: true</pre>
+    
+    The user is represented internally as a symbol (for performance reasons), presence is an attribute of the user. So now before a post is created it checks to make sure the user associated with it still exists.
+
+14. To make this easier to visualize and get some experience with editing views, lets add a column to the index of User and Post to show their id, something scaffolding doesn't show by default. 
+
+    Browse to app/views/users/index.html.erb and add a table header:
+    <pre><th>id</th></pre>
+    Above the name and email table headers. Then add the data below:
+
+13. To experiment with rails validation let's limit each post to no more than 100 characters.
+
+    Add this to your Post model:
+    <pre>validates :content, length: { maximum: 100 }</pre>
