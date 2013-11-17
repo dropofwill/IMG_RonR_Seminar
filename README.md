@@ -124,14 +124,18 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 11. Now we have users and posts, but they aren't connected. To connect them we set the user model so that it has_many posts, and that the posts belongs_to a user.
 
     Modify app/models/user.rb to
-    <pre>class User < ActiveRecord::Base
-      has_many :microposts
-    end</pre>
+    <pre>
+      class User < ActiveRecord::Base
+        has_many :microposts
+      end
+    </pre>
     
     Modify app/models/post.rb to
-    <pre>class Post < ActiveRecord::Base
-      belongs_to :user
-    end</pre>
+    <pre>
+      class Post < ActiveRecord::Base
+        belongs_to :user
+      end
+    </pre>
 
 12. This changed the way the model works internally (for instance in the rails console you can now query a user_name.post and get the posts), but there is nothing forcing a post to have a user. To do this we need to validate the users existence before creation. Rails (really the ActiveRecord class that our model is inheriting from) has a method just for this: validates
 
