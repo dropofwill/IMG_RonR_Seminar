@@ -30,6 +30,9 @@ array[1..3] #=> [2, 3, 4]
 # Add to an array like this
 array << 6 #=> [1, 2, 3, 4, 5, 6]
 
+# Delete items with a method
+array.delete(6) #=> [1, 2, 3, 4, 5]
+
 # Hashes are Ruby's primary dictionary with keys/value pairs.
 # Hashes are denoted with curly braces:
 hash = {'color' => 'green', 'number' => 5}
