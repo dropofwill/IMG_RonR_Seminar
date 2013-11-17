@@ -16,7 +16,8 @@ The goals for today are to:
 ####Ruby Links
 * [LearnXinY for Ruby](http://learnxinyminutes.com/docs/ruby/)
 * [LearnXinY for Ruby Environment/Setup](http://learnxinyminutes.com/docs/ruby-ecosystem/)
-* [Ruby Documentation](https://www.ruby-lang.org/en/documentation/)
+* [List of Ruby Documentation](https://www.ruby-lang.org/en/documentation/)
+* [Official Ruby Documentation](http://ruby-doc.org/)
 
 ####Rails Links
 * [Rails Book](http://ruby.railstutorial.org/ruby-on-rails-tutorial-book) Really good introduction to Rails and backend web development in general. Today we are effectively completing Chapters 1 & 2.

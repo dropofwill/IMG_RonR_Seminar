@@ -39,6 +39,32 @@ surround { puts 'hello world' }
 # }
 
 
+# Blocks are like closures or lamdas in other languages
+# They can be made either with:
+do
+  puts "some stuff"
+end
+#or
+{ puts "some stuff" }
+
+# You can add parameters to blocks, and they remain local to the blocks scope
+
+x = 10  
+5.times do |x|  
+  puts "x inside the block: #{x}"  
+end  
+  
+puts "x outside the block: #{x}"  
+
+#=>
+#x inside the block: 0  
+#x inside the block: 1  
+#x inside the block: 2  
+#x inside the block: 3  
+#x inside the block: 4  
+#x outside the block: 10  
+
+
 # Everything can go on one line, but it probably shouldn't
 def hello_semicolons a_string; puts "hello" + a_string; end
 
@@ -61,8 +87,10 @@ hello_newline " concatenate with this << operator", "with the + operator"
 hello_the_typical_way "parenthesis are optional", " and you can interpolate with this \#\{\}"
 
 
+
 # Control structures
 
+#if elsif else structure
 if true
   "if statement"
 elsif false
@@ -71,7 +99,15 @@ else
   "else, also optional"
 end
 
+# there is also an unless structure
 
+unless true
+  "it's false"
+else
+  "it is true"
+end
+
+#Switch structure
 grade = 'B'
 
 case grade
