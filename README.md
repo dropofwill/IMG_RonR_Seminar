@@ -162,6 +162,8 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
     
     <pre>validates :content, presence: true, length: { maximum: 100 }</pre>
     
+    This same approach can be applied to the name and email fields for the User model.
+    
 15. And then finally lets add a dependency to user so that when it is destroyed all the posts associated with it are destroyed as well.
 
     In the user model class change the has_many line so that it is dependent on destroy call:
