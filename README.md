@@ -21,14 +21,14 @@
 * [Heroku](https://www.heroku.com/) A cloud application platform that makes it really easy to deploy applications. Deployin basic apps for testing is free.
 
 ####Nitrous.io
-A cloud development environment, i.e. you program from any browser or terminal on a server located somewhere else.
+A cloud development environment, i.e. you can write your program from any browser or terminal that is hooked up to a server located somewhere else.
 
 * [Nitrous.io](https://www.nitrous.io)
 * [Nitrous.io sign-up referral link to get N20, which can be turned in for extra ram or space](https://www.nitrous.io/join/qC8ddqET1Ak)
 
 We're using this for two reasons:
 
-1. Getting Ruby and Rails setup properly on Windows is a non-trivial task and this gives an Ubuntu box with a lot of stuff we need already installed 
+1. Getting Ruby and Rails setup properly on Windows is a non-trivial task and this gives an Ubuntu box with a lot of stuff we need already installed which cuts down on startup time
 2. This way all the setup we do today doesn't just apply to the lab computer you happen to be on.
 
 If you would like to setup ruby on your own machine I recommend reading through [this guide](http://ruby.railstutorial.org/ruby-on-rails-tutorial-book#sec-up_and_running), which offers various recommendations for Linux, Mac, and Windows machines, 
@@ -42,6 +42,9 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 3. After it provisions the box it should pop up the IDE. In Rails programming a lot of work is done in the terminal, so some useful Nitrous shortcuts are:
   * Swap full screen terminal: Ctrl Shift F
   * Swap cursor focus from terminal to ide: Ctrl Shift C
+  
+  Since we are using an environment already setup for Ruby on Rails development it is for the most part ready to go. Even so it's a good idea to check to make sure everything is as it should be (Nitrous is still in beta and has changed the defaults around a bit) and get some understanding about how all these presets work together.
+  
 5. Check the Ruby version, it should be 2.0.0psomething
     
     ```ruby -v```
