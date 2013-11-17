@@ -96,54 +96,6 @@ class Item
 	# 	@author
 	# end
 end
-
-def user_input(an_inventory)
-	puts "Q to quit, D to display inventory, A to add an item, FA to find by author, FN to find by name, R to remove an item"
-	user_says = gets
-	user_says.chomp!.upcase!
-
-	case user_says
-	when 'Q'
-		puts "quiting"
-	when 'D'
-		an_inventory.display_inventory
-
-		user_input(an_inventory)
-	when 'A'
-		puts "Create new inventory item"
-		puts "The name is: "
-		temp_name = gets
-		temp_name.chomp!.upcase!
-		
-		puts "The author is: "
-		temp_author = gets
-		temp_author.chomp!.upcase!
-		an_inventory.add_item(temp_name,temp_author)
-
-		user_input(an_inventory)
-	when 'FA'
-		puts "What author are you looking for?"
-		temp_author = gets
-		temp_author.chomp!.upcase!
-		an_inventory.display_item_by("author", temp_author)
-
-		user_input(an_inventory)
-	when 'FN'
-		puts "What title are you looking for?"
-		temp_name = gets
-		temp_name.chomp!.upcase!
-		an_inventory.display_item_by("name",temp_name)
-
-		user_input(an_inventory)
-	when 'RA'
-		puts "What title do you want to delete?"
-	when 'RN'
-		puts "What author do you want to delete"
-	else
-		puts "That's not one of my commands try again"
-		user_input(an_inventory)
-	end
-end
 		
 
 my_inventory = Inventory.new
