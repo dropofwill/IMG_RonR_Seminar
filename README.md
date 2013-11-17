@@ -4,9 +4,12 @@
 The Ruby language and it's web framework counterpart, Rails, are used everywhere from website for small startups to established companies (Yellow Pages, Hulu, Twitter before 2011) to low level command line tools like Vagrant.
 
 The goals for today are to:
-1) Understand how to setup a Ruby environment
-2) Understand Ruby's syntax and idioms and then implement some of them in a basic command line app
-3) Dig into the Rails web framework, generating a MVC application with scaffolding and modifying it to suit our needs.
+
+1. Understand how to setup a Ruby environment
+
+2. Understand Ruby's syntax and idioms and then implement some of them in a basic command line app
+
+3. Dig into the Rails web framework, generating a MVC application with scaffolding and modifying it to suit our needs.
 
 ###Quick Links
 -------
