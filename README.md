@@ -44,21 +44,35 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
   * Swap cursor focus from terminal to ide: Ctrl Shift C
 5. Check the Ruby version, it should be 2.0.0psomething
     
-    <pre>ruby -v</pre>
+    ```ruby -v```
 
 4. RVM is a nice way to swap between different versions of Ruby. It should be installed, to check in the terminal run:
 
-    <pre>rvm -v</pre>
+    ```rvm -v```
 
-  This should output: rvm, followed by the version number and some other stuff.
+  This should output: rvm 1.22.something
   
   If you ever get lost in terminal, try running help or --help
   
-    <pre>rvm help
-  rvm gemset help</pre>
+    ```
+    rvm help
+    rvm gemset help
+    ```
   
-  This will tell you what commands and parameters are available.
-6. 
+  If provided, this will tell you what commands and parameters are available for the given program or sub command.
+  
+6. RVM uses gem to manage what gems are installed. 
+
+    ```gem list```
+    Will show what gems and version number are installed already for us by Nitrous
+    
+    There is a newer version of rails (4.0.1) to update run: (This is optional, shouldn't have any effect with what we're doing today)
+    ```gem install rails --version 4.0.1```
+    
+    ```rails -v```
+    To check if everything went as planned.
+    
+    There are more gems we will need, but we'll use a gemfile (a list of gems we want) and let Bundler (itself a ruby gem) install these automatically along with any dependencies, more on that later.
 
 ###Getting Started with Ruby
 -------
@@ -66,8 +80,6 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 ###Ruby Exercise
 -------
 
-###Getting Started with Rails
--------
 
 ###Rails Exercise
 -------
