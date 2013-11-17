@@ -132,10 +132,13 @@ status == :approved #=> false
 
 # This is an array
 array = [1, 2, 3, 4, 5] #=> [1, 2, 3, 4, 5]
+  
+# A shortcut for making an array of strings is %w
+string_array = %w[1 2 3 4 5] #=> ["1", "2", "3", "4", "5"]
 
 # Arrays can contain different types of items
 
-[1, "hello", false] #=> [1, "hello", false]
+[1, "hello", false, string_array] #=> => [1, "hello", false, ["1", "2", "3", "4", "5"]] 
 
 # Arrays can be indexed
 # From the front
@@ -154,9 +157,12 @@ array[-1] #=> 5
 # With a start and end index
 array[2, 4] #=> [3, 4, 5]
 
-# Or with a range
-array[1..3] #=> [2, 3, 4]
+# Or with a range including the last integer with ..
+array[0..3] #=> [1, 2, 3, 4]
 
+# Or excluding it with ...:
+array[0...3] #=> [1, 2, 3]
+  
 # Add to an array like this
 array << 6 #=> [1, 2, 3, 4, 5, 6]
 
@@ -181,3 +187,5 @@ hash['nothing here'] #=> nil
 new_hash = { defcon: 3, action: true}
 
 new_hash.keys #=> [:defcon, :action]
+  
+# Most hashes you will see use symbols for the keys, even if they don't use this new method
