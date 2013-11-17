@@ -1,5 +1,4 @@
 # Examples of how to create functions
-
 def double(x)
   x * 2
 end
