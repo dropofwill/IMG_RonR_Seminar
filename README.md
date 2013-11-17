@@ -67,12 +67,15 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 6. RVM uses gem to manage what gems are installed. 
 
     ```gem list```
+    
     Will show what gems and version number are installed already for us by Nitrous
     
     There is a newer version of rails (4.0.1) to update run: (This is optional, shouldn't have any effect with what we're doing today)
+    
     ```gem install rails --version 4.0.1```
     
     ```rails -v```
+    
     To check if everything went as planned.
     
     There are more gems we will need, but we'll use a gemfile (a list of gems we want) and let Bundler (itself a ruby gem) install these automatically along with any dependencies, more on that later.
