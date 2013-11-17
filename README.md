@@ -133,20 +133,38 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
       belongs_to :user
     end</pre>
 
-12. This changed the way the model works internally (for instance in the rails console you can now query a user_name.post and get the posts), but there is nothing forcing a post to have a user. To do this we need to validate the users existence before creation. Rails has the functionality to make this really easily:
+12. This changed the way the model works internally (for instance in the rails console you can now query a user_name.post and get the posts), but there is nothing forcing a post to have a user. To do this we need to validate the users existence before creation. Rails (really the ActiveRecord class that our model is inheriting from) has a method just for this: validates
 
     Add this line to the Post model class, in app/models/post.rb
+    
     <pre>validates :user, presence: true</pre>
     
     The user is represented internally as a symbol (for performance reasons), presence is an attribute of the user. So now before a post is created it checks to make sure the user associated with it still exists.
 
-14. To make this easier to visualize and get some experience with editing views, lets add a column to the index of User and Post to show their id, something scaffolding doesn't show by default. 
+13. To make this easier to visualize and get some experience with editing views, lets add a column to the index of User and Post to show their id, something scaffolding doesn't show by default. 
 
     Browse to app/views/users/index.html.erb and add a table header:
+    
     <pre><th>id</th></pre>
+    
     Above the name and email table headers. Then add the data below:
+    
+    <pre><td><%= user.id %></td></pre>
+    
+    And repeat for the post view.
 
-13. To experiment with rails validation let's limit each post to no more than 100 characters.
+14. To experiment with rails validation some more let's limit each post to no more than 100 characters or whatever you like.
 
     Add this to your Post model:
     <pre>validates :content, length: { maximum: 100 }</pre>
+    
+    We can also throw in more validation for the content in the same method call:
+    
+    <pre>validates :content, presence: true, length: { maximum: 100 }</pre>
+    
+15. And then finally lets add a dependency to user so that when it is destroyed all the posts associated with it are destroyed as well.
+
+    In the user model class change the has_many line so that it is dependent on destroy call:
+    <pre>has_many :posts, dependent: :destroy</pre>
+    
+And that's it! While it may not seem like we've done much, this app is actually accomplishing quite a lot with very little effort on our part. We have a relational database with two models, established dependencies and validation and an interface of views and routes to edit these with.
