@@ -32,13 +32,22 @@ end
 # You can also surround blocks in curly brackets:
 (1..5).each {|counter| puts "iteration #{counter}"}
 
+
+
 # The contents of data structures can also be iterated using each.
+array = [1, 2, 3, 4, 5]
+
 array.each do |element|
   puts "#{element} is part of the array"
 end
+
+hash = { color: 'green', number: 5}
+
 hash.each do |key, value|
   puts "#{key} is #{value}"
 end
+
+# There are while loops too
 
 counter = 1
 while counter <= 5 do
