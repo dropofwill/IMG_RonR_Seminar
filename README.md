@@ -125,14 +125,14 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 
     Modify app/models/user.rb to
     <pre><code>
-      class User < ActiveRecord::Base
+      class User /< ActiveRecord::Base
         has_many :microposts
       end
     </code></pre>
     
     Modify app/models/post.rb to
     <pre><code>
-      class Post < ActiveRecord::Base
+      class Post /< ActiveRecord::Base
         belongs_to :user
       end
     </code></pre>
