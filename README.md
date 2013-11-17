@@ -111,6 +111,18 @@ Or include the filepath in call:
     ruby path/to/file/filename.rb
   ```
 
+Check out [example_irb.rb](https://github.com/dropofwill/IMG_RonR_Seminar/blob/master/example_irb.rb) for an overview of Ruby syntax and things to try in irb.
+
+While irb is cool and you can write classes and functions in irb, I don't recommend it. Once you're ready to write multi-line functionality move to the ide and run it from the terminal.
+
+#####enumerable/loops/hashes/arrays
+example_enum.rb 
+
+#####functions/blocks/yield
+example_functions.rb
+
+#####classes/inheritance/scope
+example_classes
 
 ###Ruby Exercise
 -------
