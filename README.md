@@ -74,42 +74,42 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 
 1. Create a new directory for the app with: make directory
 
-    <pre>mkdir name_of_your_app</pre>
+    ```mkdir name_of_your_app```
 
 2. Move into that directory with: change directory
 
-    <pre>cd name_of_your_app</pre>
+    ```cd name_of_your_app```
     
 3. Create a new rails app
 
-    <pre>rails new</pre>
+    ```rails new```
     
 4. Take a look at what this generated for us with: list (ls) all (-a) in a list format (-l)
 
-    <pre>ls -al</pre>
+    ```ls -al```
     
 5. Update the gemfile
 6. While we haven't written any new code yet, rails gives us a very basic app to start with. To run this app type:
 
-    <pre>rails server</pre>
+    ```rails server```
     
     or
     
-    <pre>rails s</pre>
+    ```rails s```
     
   This will take a few seconds, but it should eventually output something like:
   
-    <pre>=> Rails 4.0.1 application starting in development on http://0.0.0.0:3000</pre>
+    ```=> Rails 4.0.1 application starting in development on http://0.0.0.0:3000```
   
   This tells you what port it is running on, in my case that's Port 3000. To preview the app, in Nitrous click on the Preview menu-item and select the appropriate port. This will open up a new tab with the default page of the application.
 
 7. To make a data model with create, read, update, and delete functionality we can use rails generate scaffold command. For a simple User model we want a unique Id (an integer), a username (a string), and an email (a string). Rails gives us a unique id by default so the final command would be:
 
-    <pre>rails generate scaffold User name:string email:string</pre>
+    ```rails generate scaffold User name:string email:string```
     
 8. This gives us a lot of code and pages, but to make it work we must update (migrate) the database to reflect the new model. To do this use rake, a gem that should already be installed as a rails dependency.
     
-    <pre>rake db:migrate</pre>
+    ```rake db:migrate```
     
 9. Now try running the app again, at the end of the url type /users . From here we can create a new user, edit existing ones, show a users individual page, and delete the user.
 
@@ -141,7 +141,9 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 
     Add this line to the Post model class, in app/models/post.rb
     
-    <pre>validates :user, presence: true</pre>
+    ```ruby
+    validates :user, presence: true
+    ```
     
     The user is represented internally as a symbol (for performance reasons), presence is an attribute of the user. So now before a post is created it checks to make sure the user associated with it still exists.
 
@@ -149,28 +151,43 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 
     Browse to app/views/users/index.html.erb and add a table header:
     
-    <pre><th>id</th></pre>
+    ```html
+    <th>
+      id
+    </th>
+    ```
     
     Above the name and email table headers. Then add the data below:
     
-    <pre><td><%= user.id %></td></pre>
+    ```html
+    <td>
+      <%= user.id %>
+    </td>
+    ```
     
     And repeat for the post view.
 
 14. To experiment with rails validation some more let's limit each post to no more than 100 characters or whatever you like.
 
     Add this to your Post model:
-    <pre>validates :content, length: { maximum: 100 }</pre>
+    ```ruby
+    validates :content, length: { maximum: 100 }
+    ```
     
     We can also throw in more validation for the content in the same method call:
     
-    <pre>validates :content, presence: true, length: { maximum: 100 }</pre>
+    ```ruby
+    validates :content, presence: true, length: { maximum: 100 }
+    ```
     
     This same approach can be applied to the name and email fields for the User model.
     
 15. And then finally lets add a dependency to user so that when it is destroyed all the posts associated with it are destroyed as well.
 
     In the user model class change the has_many line so that it is dependent on destroy call:
-    <pre>has_many :posts, dependent: :destroy</pre>
+    
+    ```ruby
+    has_many :posts, dependent: :destroy
+    ```
     
 And that's it! While it may not seem like we've done much, this app is actually accomplishing quite a lot with very little effort on our part. We have a relational database with two models, established dependencies and validation and an interface of views and routes to edit these with.
