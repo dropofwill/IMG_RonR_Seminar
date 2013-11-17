@@ -99,7 +99,18 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
     
   This will take a few seconds, but it should eventually output something like:
   
-  <pre>=> Rails 4.0.1 application starting in development on http://0.0.0.0:3000</pre>
+    <pre>=> Rails 4.0.1 application starting in development on http://0.0.0.0:3000</pre>
   
   This tells you what port it is running on, in my case that's Port 3000. To preview the app, in Nitrous click on the Preview menu-item and select the appropriate port. This will open up a new tab with the default page of the application.
-7.
+
+7. To make a data model with create, read, update, and delete functionality we can use rails generate scaffold command. For a simple User model we want a unique Id (an integer), a username (a string), and an email (a string). Rails gives us a unique id by default so the final command would be:
+
+    <pre>rails generate scaffold User name:string email:string</pre>
+    
+8. This gives us a lot of code and pages, but to make it work we must update (migrate) the database to reflect the new model. To do this use rake, a gem that should already be installed as a rails dependency.
+    
+    <pre>rake db:migrate</pre>
+    
+9. Now try running the app again, at the end of the url type /users . From here we can create a new user, edit existing ones, show a users individual page, and delete the user.
+
+10. That's cool, but what can these users do? Let's make a post resource, it should have 
