@@ -1,0 +1,3 @@
+[submodule "demo_rails_app"]
+	path = demo_rails_app
+	url = git@github.com:dropofwill/IMG_Rails_Bootcamp.git

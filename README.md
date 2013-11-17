@@ -88,7 +88,14 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 
     ```ls -al```
     
-5. Update the gemfile
+5. Update the gemfile to match the example one in the demo_rails_app repository above. Once completed run:
+    
+    ```bundle update```
+    
+    then
+    
+    ```bundle install --without production```
+    
 6. While we haven't written any new code yet, rails gives us a very basic app to start with. To run this app type:
 
     ```rails server```
