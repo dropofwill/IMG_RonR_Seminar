@@ -124,15 +124,15 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 11. Now we have users and posts, but they aren't connected. To connect them we set the user model so that it has_many posts, and that the posts belongs_to a user.
 
     Modify app/models/user.rb to
-    <pre><code>
-      class User \< ActiveRecord::Base
+    ```ruby
+      class User < ActiveRecord::Base
         has_many :microposts
       end
-    </code></pre>
+    ```
     
     Modify app/models/post.rb to
     <pre><code>
-      class Post \< ActiveRecord::Base
+      class Post < ActiveRecord::Base
         belongs_to :user
       end
     </code></pre>
