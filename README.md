@@ -51,7 +51,7 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
   If you ever get lost in terminal, try running help or --help
   
     <pre>rvm help
-    rvm gemset help</pre>
+  rvm gemset help</pre>
   
 5. Check the Ruby version, it should be 2.0.0psomething
     
