@@ -1,6 +1,13 @@
 ##Guide to Ruby on Rails Bootcamp for IMG @ RIT
 =======
 
+The Ruby language and it's web framework counterpart, Rails, are used everywhere from website for small startups to established companies (Yellow Pages, Hulu, Twitter before 2011) to low level command line tools like Vagrant.
+
+The goals for today are to:
+1) Understand how to setup a Ruby environment
+2) Understand Ruby's syntax and idioms and then implement some of them in a basic command line app
+3) Dig into the Rails web framework, generating a MVC application with scaffolding and modifying it to suit our needs.
+
 ###Quick Links
 -------
 ####Ruby Links
@@ -128,7 +135,11 @@ While irb is cool and you can write classes and functions in irb, I don't recomm
 
 ###Ruby Exercise
 -------
-Now it's time to build a basic terminal app with Ruby. The goal here is to get a feel for the ruby way of doing things. I built a very basic inventory management app as an example, you can try and build something like that or do your own thing. We'll spend about thirty or so minutes on this.
+Now it's time to build a basic terminal app with Ruby. The goal here is to get a feel for the ruby way of doing things. 
+
+As an [example](https://github.com/dropofwill/IMG_RonR_Seminar/blob/master/example_app.rb) I built a very basic inventory management app as an example. It has two classes Item and Inventory. Item is made up of just instance variables and getters/setters. Inventory stores these items in an array and has methods to modify (add, remove, display, find, etc.). 
+
+You can try and build something like that or do your own thing. We have about thirty or so minutes and I'll be around to help.
 
 ###Rails Exercise
 -------
