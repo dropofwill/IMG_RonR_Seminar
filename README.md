@@ -44,7 +44,7 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
   * Swap cursor focus from terminal to ide: Ctrl Shift C
 4. RVM is a nice way to swap between different versions of Ruby. It should be installed, to check in the terminal run:
 
-      rvm -v
+      <rvm -v>
 
   This should output: rvm, followed by the version number and some other stuff
 5. Ruby
