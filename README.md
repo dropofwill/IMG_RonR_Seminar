@@ -1,4 +1,4 @@
-##IMG's Ruby on Rails Bootcamp Guide
+##Guide to Ruby on Rails Bootcamp for IMG @ RIT
 =======
 
 ###Quick Links
