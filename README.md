@@ -24,7 +24,7 @@
 A cloud development environment, i.e. you program from any browser or terminal on a server located somewhere else.
 
 * [Nitrous.io](https://www.nitrous.io)
-* [Nitrous.io sign-up referral link to get extra ram or space](https://www.nitrous.io/join/qC8ddqET1Ak)
+* [Nitrous.io sign-up referral link to get N20, which can be turned in for extra ram or space](https://www.nitrous.io/join/qC8ddqET1Ak)
 
 We're using this for two reasons:
 
@@ -33,6 +33,14 @@ We're using this for two reasons:
 
 ###Ruby/Rails Setup
 -------
+We're going to use a Nitrous.io Ruby box, which should come pre installed with Ruby, RVM, and RubyGems. If you want to do this on your own machine, look into [this section of the Rails book.](http://ruby.railstutorial.org/ruby-on-rails-tutorial-book#sec-up_and_running)
+
+1. [Create a Nitrous.io account](https://www.nitrous.io/join/qC8ddqET1Ak)
+2. Build a Ruby Box on the East Coast (you can adjust the settings later)
+3. After it provisions the box it should pop up the IDE. In Rails programming a lot of work is done in the terminal, so some useful Nitrous shortcuts are:
+  * Swap full screen terminal: Ctrl Shift F
+  * Swap cursor focus from terminal to ide: Ctrl Shift C
+4.
 
 ###Getting Started with Ruby
 -------
