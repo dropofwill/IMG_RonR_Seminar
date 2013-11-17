@@ -128,7 +128,7 @@ While irb is cool and you can write classes and functions in irb, I don't recomm
 
 ###Ruby Exercise
 -------
-
+Now it's time to build a basic terminal app with Ruby. The goal here is to get a feel for the ruby way of doing things. I built a very basic inventory management app as an example, you can try and build something like that or do your own thing. We'll spend about thirty or so minutes on this.
 
 ###Rails Exercise
 -------
