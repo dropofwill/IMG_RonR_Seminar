@@ -94,6 +94,25 @@ y #=> 10
 # By convention, use snake_case for variable names
 snake_case = true
 
+# Variable's scopes are defined by the way we name them.
+# Variables that start with $ have global scope
+$var = "I'm a global var"
+defined? $var #=> "global-variable"
+
+# Variables that start with @ have instance scope
+@var = "I'm an instance var"
+defined? @var #=> "instance-variable"
+
+# Variables that start with @@ have class scope
+@@var = "I'm a class var"
+defined? @@var #=> "class variable"
+
+# Variables that start with a capital letter are constants
+Var = "I'm a constant"
+defined? Var #=> "constant"
+  
+  
+  
 # Symbols (are objects)
 # Symbols are immutable, reusable constants represented internally by an
 # integer value. They're often used instead of strings to efficiently convey
