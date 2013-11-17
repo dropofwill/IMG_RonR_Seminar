@@ -85,7 +85,9 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 
 To play around with ruby syntax you can run interactive ruby
 
-  ```irb```
+  ```
+    irb
+  ```
 
 Which lets you run ruby syntax and watch the responses in real time.
 
