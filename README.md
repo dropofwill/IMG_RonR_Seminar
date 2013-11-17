@@ -119,7 +119,7 @@ While irb is cool and you can write classes and functions in irb, I don't recomm
 #####Enumerable Objects, Loops, Hashes, and Arrays
 [example_enum.rb](https://github.com/dropofwill/IMG_RonR_Seminar/blob/master/example_enum.rb)
 
-#####Functions and Blocks
+#####Functions, Blocks, and Control Structures
 [example_functions.rb](https://github.com/dropofwill/IMG_RonR_Seminar/blob/master/example_functions.rb)
 
 #####Classes, Inheritance, Scope, and Getters/Setters

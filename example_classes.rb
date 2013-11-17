@@ -37,22 +37,32 @@ class Person
   
 end
 
-=begin
 group = [
   Person.new("Bob", 33),
   Person.new("Chris", 16),
   Person.new("Ash", 23)
 ]
- 
-puts group.sort.reverse
 
+group.each { |p| puts "#{p.name} is #{p.age} years old" } 
 
 person_1 = group[0]
 puts person_1.name
 puts person_1.age
 puts person_1.name = "George"
-# puts person_1.age = 10 #=> not accesible
+#puts person_1.age = 10 #=> not accesible
 
 # Call the class method
 Person.say("Hi") #=> "Hi"
-=end
+
+# Inheritance
+class Worker < Person
+  attr_accessor :profession
+  def initialize name, age, profession
+    @name, @age, @profession = name, age, profession
+  end
+end
+
+person_2 = Worker.new("Asher", 45, "Painter")
+group << person_2
+
+group.each { |p| puts "#{p.name} is #{p.age} years old" } 
