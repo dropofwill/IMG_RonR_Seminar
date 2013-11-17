@@ -14,6 +14,7 @@ class Inventory
 		@items_array.each do |item|
 			puts "Item named: #{item.name} \t Made by: #{item.author}" 
 		end
+    puts @items_array.length
 	end
 
 	def display_item_by(attribute, value)
@@ -148,4 +149,6 @@ end
 my_inventory = Inventory.new
 my_inventory.add_item("Yolo", "Steinbeck")
 my_inventory.display_inventory
-user_input(my_inventory)
+my_inventory.add_item("Green", "Bluish")
+my_inventory.display_inventory
+#user_input(my_inventory)
