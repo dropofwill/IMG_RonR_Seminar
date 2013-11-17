@@ -29,7 +29,9 @@ A cloud development environment, i.e. you program from any browser or terminal o
 We're using this for two reasons:
 
 1. Getting Ruby and Rails setup properly on Windows is a non-trivial task and this gives an Ubuntu box with a lot of stuff we need already installed 
-2. This way all the setup we do today doesn't just apply to the computer you do it on 
+2. This way all the setup we do today doesn't just apply to the lab computer you happen to be on.
+
+If you would like to setup ruby on your own machine I recommend reading through [this guide](http://ruby.railstutorial.org/ruby-on-rails-tutorial-book#sec-up_and_running), which offers various recommendations for Linux, Mac, and Windows machines, 
 
 ###Ruby/Rails Setup
 -------
@@ -40,7 +42,10 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 3. After it provisions the box it should pop up the IDE. In Rails programming a lot of work is done in the terminal, so some useful Nitrous shortcuts are:
   * Swap full screen terminal: Ctrl Shift F
   * Swap cursor focus from terminal to ide: Ctrl Shift C
-4.
+4. RVM is a nice way to swap between different versions of Ruby. It should be installed, to check in the terminal run:
+    rvm -v
+  This should output: rvm, followed by the version number and some other stuff
+5. Ruby
 
 ###Getting Started with Ruby
 -------
