@@ -170,6 +170,7 @@ We're going to use a Nitrous.io Ruby box, which should come pre installed with R
 14. To experiment with rails validation some more let's limit each post to no more than 100 characters or whatever you like.
 
     Add this to your Post model:
+    
     ```ruby
     validates :content, length: { maximum: 100 }
     ```
