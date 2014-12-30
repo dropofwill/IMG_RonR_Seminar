@@ -1,4 +1,4 @@
-##Guide to Ruby on Rails Bootcamp for IMG @ RIT
+Beginners Guide to Ruby on Rails Bootcamp for IMG @ RIT
 =======
 
 The Ruby language and it's web framework counterpart, Rails, are used everywhere from website for small startups to established companies (Yellow Pages, Hulu, Twitter before 2011) to low level command line tools like Vagrant.
